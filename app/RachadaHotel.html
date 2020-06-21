@@ -1,0 +1,582 @@
+---
+title: Rachada Hotel
+layout: ./app/layout.ejs
+engine: ejs
+current: RachadaHotel
+---
+
+<!-- 搜尋訂房資訊 -->
+<div class="bg-primary-light d-none d-md-block d-md-flex justify-content-md-center align-items-md-center mb-md-4">
+  <div class="container d-md-flex justify-content-md-between p-4 rounded">
+    <ul class="d-md-flex justify-content-md-between w-100 mr-md-2">
+      <li class="dropdown w-lg-30">
+        <button class="btn bg-white d-md-flex align-items-md-center py-md-2 w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons">place</i>
+          <div class="d-md-flex flex-md-column text-md-left">
+            <span class="font-size-md-sm font-weight-bold text-uppercase">Destination</span>
+            <p class="font-size-md-s text-gray-dark">Bangkok, Thailand</p>
+          </div>
+        </button>
+        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Bangkok</p>
+              <span class="font-size-sm text-gray-dark">Thailiand</span>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Osaka</p>
+              <span class="font-size-sm text-gray-dark">Japan</span>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Roma</p>
+              <span class="font-size-sm text-gray-dark">Italy</span>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Paris</p>
+              <span class="font-size-sm text-gray-dark">London</span>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Reykjavik</p>
+              <span class="font-size-sm text-gray-dark">Iceland</span>
+            </div>
+          </button>
+        </div>
+      </li>
+      <li class="dropdown d-lg-none">
+        <button class="btn bg-white d-flex align-items-center py-md-2 w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons mr-2">event_note</i>
+          <div class="d-md-flex flex-md-column text-md-left">
+            <span class="font-size-md-sm font-weight-bold text-uppercase">Check-in / Check-out</span>
+            <p class="font-size-md-s text-gray-dark">17 June - 19 June</p>
+          </div>        
+        </button>
+      </li>
+      <li class="dropdown w-lg-30 d-md-none d-lg-block d-lg-flex">
+        <button class="btn bg-white d-flex align-items-center rounded-left border-right py-md-2 w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons mr-2">event_note</i>
+          <div class="d-md-flex flex-md-column text-md-left">
+            <span class="font-size-md-sm font-weight-bold text-uppercase">Check-in</span>
+            <p class="font-size-md-s text-gray-dark">17 June</p>
+          </div>        
+        </button>
+        <button class="btn bg-white d-md-flex flex-md-column text-md-left rounded-right py-md-2 w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="font-size-md-sm font-weight-bold text-uppercase">Check-out</span>
+          <p class="font-size-md-s text-gray-dark">19 June</p>    
+        </button>
+      </li>
+      <li class="dropdown w-lg-30">
+        <button class="btn bg-white d-flex align-items-center py-md-2 w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons mr-2">person</i>
+          <div class="d-md-flex flex-md-column text-md-left">
+            <span class="font-size-md-sm font-weight-bold text-uppercase">Guests</span>
+            <p class="font-size-md-s text-gray-dark">2 adults・1 room</p>
+          </div> 
+        </button>
+        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item d-flex justify-content-between px-3 mb-3" type="button">
+            <p>Adult</p>
+            <div class="d-flex ">
+              <i class="material-icons">remove</i>
+              <p class="text-gray-dark mx-3">2</p>
+              <i class="material-icons">add</i>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex justify-content-between px-3 mb-3" type="button">
+            <p>Child</p>
+            <div class="d-flex ">
+              <i class="material-icons">remove</i>
+              <p class="text-gray-dark mx-3">0</p>
+              <i class="material-icons">add</i>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex justify-content-between px-3 " type="button">
+            <p>Room</p>
+            <div class="d-flex ">
+              <i class="material-icons">remove</i>
+              <p class="text-gray-dark mx-3">1</p>
+              <i class="material-icons">add</i>
+            </div>
+          </button>
+        </div>
+      </li>
+    </ul>
+    <a class="btn btn-primary font-family-OpenSans font-weight-bold text-uppercase py-md-2 px-md-4 px-lg-5" href="bangkokBooking.html" role="button">Search</a>  
+  </div>
+</div> 
+<div class="bg-primary-light d-md-none">
+  <div class="container">
+    <div class="d-flex align-items-center py-3">
+      <a href="bangkokBooking.html"><i class="material-icons mr-3">keyboard_backspace</i></a>
+      <p class="font-size-sm text-gray-dark">Bangkok・17 June - 19 June・2 adults・1 room</p>
+    </div>
+  </div>
+</div> 
+
+<!-- 手機板房型資訊 -->
+<section class="mb-6 d-md-none">
+  <div class="swiper-container mb-3">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide p-0">
+        <img src="assets/images/Rachada1.jpg" class="swiper-slide-img">
+      </div>
+      <div class="swiper-slide p-0">
+        <img src="assets/images/Rachada1.jpg" class="swiper-slide-img">
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next text-white"></div>
+    <div class="swiper-button-prev text-white"></div>
+  </div>
+  <div class="container">
+    <h2 class="font-family-Raleway font-size-ml font-weight-bold mb-2">Rachada Hotel</h2>
+    <div class="d-flex align-items-center mb-2">
+      <div class="d-flex align-items-center mr-1">
+        <i class="material-icons font-size-s">star</i>
+        <i class="material-icons font-size-s">star</i>
+        <i class="material-icons font-size-s">star</i>
+        <i class="material-icons font-size-s">star</i>
+      </div>
+      <span class="font-size-s text-gray-dark">4.0  (283)</span>
+    </div>
+    <p class="font-size-sm text-primary mb-3">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</p>
+    <p class="font-size-s text-gray-dark">The Rachada Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen television, and en-suite bathrooms.</p>
+  </div>
+</section>
+<!-- 手機板其他房型 -->
+<section class="mb-6 d-md-none">
+  <div class="container">
+    <h2 class="font-family-Raleway font-size-m font-weight-bold mb-3">Select your room</h2>
+    <ul class="list-unstyled">
+      <li class="border rounded mb-2">
+        <div class="media align-items-center">
+          <img src="assets/images/roomA.jpg" class="media-img" alt="...">
+          <div class="media-body pl-2 pr-4">
+            <div class="d-flex flex-column">
+              <h3 class="font-weight-bold mb-1">Deluxe Double Room A</h3>
+              <span class="font-size-sm text-gray-dark mb-2">1 bed (Queen size)</span>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+              <i class="material-icons font-size-normal text-gray-dark mr-2">wifi</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">personal_video</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">restaurant</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">ac_unit</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">room_service</i>
+              <i class="material-icons font-size-normal text-gray-dark">smoke_free</i>
+            </div>
+            <div class="d-flex">
+              <i class="material-icons">person</i>
+              <i class="material-icons">person</i>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center bg-primary-light px-2 py-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <i class="material-icons">remove</i>
+            <p class="text-gray-dark mx-5">0</p>
+            <i class="material-icons">add</i>
+          </div> 
+          <div class="text-right">
+            <strike class="font-size-s text-gray-dark">TWD 1,600</strike>
+            <p class="font-weight-bold">TWD<span class="text-primary">1,490</span></p>
+          </div>
+        </div>
+      </li>
+      <li class="border rounded mb-2">
+        <div class="media align-items-center">
+          <img src="assets/images/roomB.jpg" class="media-img" alt="...">
+          <div class="media-body pl-2 pr-4">
+            <div class="d-flex flex-column">
+              <h3 class="font-weight-bold mb-1">Deluxe Double Room A</h3>
+              <span class="font-size-sm text-gray-dark mb-2">1 bed (Queen size)</span>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+              <i class="material-icons font-size-normal text-gray-dark mr-2">wifi</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">personal_video</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">restaurant</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">ac_unit</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">room_service</i>
+              <i class="material-icons font-size-normal text-gray-dark">smoke_free</i>
+            </div>
+            <div class="d-flex">
+              <i class="material-icons">person</i>
+              <i class="material-icons">person</i>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center bg-primary-light px-2 py-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <i class="material-icons">remove</i>
+            <p class="text-gray-dark mx-5">0</p>
+            <i class="material-icons">add</i>
+          </div> 
+          <p class="font-weight-bold">TWD 1,600</p>
+        </div>
+      </li>
+      <li class="border rounded">
+        <div class="media align-items-center">
+          <img src="assets/images/Rachada1.jpg" class="media-img" alt="...">
+          <div class="media-body pl-2 pr-4">
+            <div class="d-flex flex-column">
+              <h3 class="font-weight-bold mb-1">Deluxe Suite with Pool</h3>
+              <span class="font-size-sm text-gray-dark mb-2">1 bed (Queen size)</span>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+              <i class="material-icons font-size-normal text-gray-dark mr-2">wifi</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">personal_video</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">restaurant</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">ac_unit</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">kitchen</i>
+              <i class="material-icons font-size-normal text-gray-dark mr-2">room_service</i>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+              <i class="material-icons font-size-normal text-gray-dark">local_bar</i>
+              <i class="material-icons font-size-normal text-gray-dark">smoke_free</i>
+            </div>
+            <div class="d-flex mb-2">
+              <i class="material-icons">person</i>
+              <i class="material-icons">person</i>
+            </div>
+          </div>
+        </div>
+        <a class="d-flex justify-content-between align-items-center bg-primary-light px-2 py-3" href="reservation.html">
+          <diva class="d-flex justify-content-between align-items-center">
+            <i class="material-icons">remove</i>
+            <p class="text-gray-dark mx-5">0</p>
+            <i class="material-icons">add</i>
+          </diva> 
+          <p class="font-weight-bold">TWD 1,980</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 平板以上房型資訊 -->
+<section class="rachada container d-none d-md-block mb-md-6">
+  <div class="form-row mb-md-3">
+    <div class="col-md-7">
+      <img src="assets/images/Rachada1.jpg" alt="" class="objectCover rachada-img-first rounded">
+    </div>
+    <div class="col-md-5">
+      <img src="assets/images/Rachada2.jpg" alt="" class="objectCover rachada-img-secondary rounded mb-md-1 mb-lg-2">
+      <div class="form-row">
+        <div class="col-md-6">
+          <img src="assets/images/Rachada3.jpg" alt="" class="objectCover rachada-img-third rounded">
+        </div>
+        <div class="col-md-6">
+          <img src="assets/images/Rachada4.jpg" alt="" class="objectCover rachada-img-forth rounded mb-md-2">
+          <a href="#" type="button" class="d-md-flex justify-content-md-center bg-secondary rounded py-md-2 py-lg-3 w-100">
+            <span class="font-size-md-sm font-size-lg-normal font-weight-bold text-white ">SEE ALL 10 PHOTOS</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9 col-lg-7">
+      <div class="d-md-flex align-items-md-center">
+        <h2 class="font-family-Raleway font-size-md-ml font-weight-bold mr-md-3">Rachada Hotel</h2>
+        <div class="d-md-flex align-items-md-center">
+          <div class="d-flex align-items-center mr-1">
+            <i class="material-icons font-size-s">star</i>
+            <i class="material-icons font-size-s">star</i>
+            <i class="material-icons font-size-s">star</i>
+            <i class="material-icons font-size-s">star</i>
+          </div>
+          <span class="font-size-md-s text-gray-dark">4.0  (283)</span>
+        </div>
+      </div>
+      <p class="font-size-md-s text-primary mb-md-4">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</p>
+      <p class="font-size-md-s text-gray-dark">The Rachada Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen television, and en-suite bathrooms.</p>
+    </div>
+    <div class="col-md-3 col-lg-5"></div>
+  </div>
+</section> 
+<!-- 平板以上其他房型 -->
+<section class="container d-none d-md-block mb-md-6">
+  <h2 class="font-family-Raleway font-size-md-m font-weight-bold mb-md-4">Select your room</h2>
+  <ul class="d-md-flex align-items-md-center mb-md-5">
+    <li class="bg-primary-light font-size-md-s text-gray-light py-md-2 px-md-3 rounded mr-md-2">Bangkok, Thailand</li>
+    <li class="bg-primary-light font-size-md-s text-gray-light py-md-2 px-md-3 rounded mr-md-2">17 June - 19 June・2 nights</li>
+    <li class="bg-primary-light font-size-md-s text-gray-light py-md-2 px-md-3 rounded mr-md-4">2 adults・1 room</li>
+    <li>
+      <button class="btn font-weight-bold text-primary">EDIT DETAIL</button>
+    </li>
+  </ul>
+
+  <table class="w-100">
+    <thead>
+      <tr class="border-bottom">
+        <th class="font-weight-bold text-uppercase pb-md-2">Room Type</th>
+        <th class="font-weight-bold text-uppercase pb-md-2 text-lg-center">Sleeps</th>
+        <th class="font-weight-bold text-uppercase pb-md-2 px-md-6 px-lg-0 text-lg-center">Price</th>
+        <th class="font-weight-bold text-uppercase pb-md-2 text-lg-center">Rooms</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="border-bottom">
+        <td class="py-md-3">
+          <div class="media align-items-center">
+            <img src="assets/images/roomA.jpg" class="media-img rounded-left" alt="...">
+            <div class="media-body pl-md-2 pl-lg-3">
+              <div class="d-flex flex-column">
+                <h3 class="font-weight-bold mb-1">Deluxe Double Room A</h3>
+                <span class="font-size-sm text-gray-dark mb-md-2 mb-lg-3">1 bed (Queen size)</span>
+              </div>
+              <div class="d-md-flex align-items-md-center d-lg-none">
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">wifi</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">personal_video</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">restaurant</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">ac_unit</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">room_service</i>
+                <i class="material-icons font-size-normal text-gray-dark">smoke_free</i>
+              </div>
+              <ul class="d-lg-flex flex-lg-wrap justify-content-lg-between d-md-none d-lg-block">
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">wifi</i>
+                  <span class="font-size-lg-s text-gray-dark">Wi-Fi</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">room_service</i>
+                  <span class="font-size-lg-s text-gray-dark">Room Service</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">restaurant</i>
+                  <span class="font-size-lg-s text-gray-dark">Breakfast</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">smoke_free</i>
+                  <span class="font-size-lg-s text-gray-dark">Smoke Free</span>
+                </li>
+                <li class="w-100 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">personal_video</i>
+                  <span class="font-size-lg-s text-gray-dark">Television</span>
+                </li>
+                <li class="w-100">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">ac_unit</i>
+                  <span class="font-size-lg-s text-gray-dark">Air Conditioner</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <div class="d-flex justify-content-lg-center">
+            <i class="material-icons">person</i>
+            <i class="material-icons">person</i>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <div class="d-md-flex flex-md-column text-center">
+            <strike class="font-size-md-s text-gray-dark">TWD 1,600</strike>
+            <p class="font-weight-bold">TWD<span class="text-primary">1,490</span></p>
+            <span class="font-size-md-sm text-gray-dark">per night</span>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <div class="d-md-flex justify-content-md-center align-items-md-center">
+            <i class="material-icons">remove</i>
+            <p class="text-gray-dark mx-md-3">0</p>
+            <i class="material-icons">add</i>
+          </div>
+        </td>
+      </tr>
+      <tr class="border-bottom">
+        <td class="py-md-3">
+          <div class="media align-items-center">
+            <img src="assets/images/roomB.jpg" class="media-img rounded-left" alt="...">
+            <div class="media-body pl-md-2 pl-lg-3">
+              <div class="d-flex flex-column">
+                <h3 class="font-weight-bold mb-1">Deluxe Double Room B</h3>
+                <span class="font-size-sm text-gray-dark mb-md-2 mb-lg-3">1 bed (Queen size)</span>
+              </div>
+              <div class="d-md-flex align-items-md-center d-lg-none">
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">wifi</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">personal_video</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">restaurant</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">ac_unit</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">kitchen</i>
+                <i class="material-icons font-size-normal text-gray-dark">room_service</i>
+              </div>
+              <ul class="d-lg-flex flex-lg-wrap justify-content-lg-between d-md-none d-lg-block">
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">wifi</i>
+                  <span class="font-size-lg-s text-gray-dark">Wi-Fi</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">room_service</i>
+                  <span class="font-size-lg-s text-gray-dark">Room Service</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">restaurant</i>
+                  <span class="font-size-lg-s text-gray-dark">Breakfast</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">smoke_free</i>
+                  <span class="font-size-lg-s text-gray-dark">Smoke Free</span>
+                </li>
+                <li class="w-100 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">personal_video</i>
+                  <span class="font-size-lg-s text-gray-dark">Television</span>
+                </li>
+                <li class="w-100">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">ac_unit</i>
+                  <span class="font-size-lg-s text-gray-dark">Air Conditioner</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <div class="d-flex justify-content-lg-center">
+            <i class="material-icons">person</i>
+            <i class="material-icons">person</i>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <div class="d-md-flex flex-md-column text-center">
+            <p class="font-weight-bold">TWD 1,600</p>
+            <span class="font-size-md-sm text-gray-dark">per night</span>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <div class="d-md-flex justify-content-md-center align-items-md-center">
+            <i class="material-icons">remove</i>
+            <p class="text-gray-dark mx-md-3">0</p>
+            <i class="material-icons">add</i>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="py-md-3">
+          <div class="media align-items-center">
+            <img src="assets/images/Rachada1.jpg" class="media-img rounded-left" alt="...">
+            <div class="media-body pl-md-2 pl-lg-3">
+              <div class="d-flex flex-column">
+                <h3 class="font-weight-bold mb-1">Deluxe Suite with Pool</h3>
+                <span class="font-size-sm text-gray-dark mb-md-2 mb-lg-3">1 bed (Queen size)</span>
+              </div>
+              <div class="d-md-flex align-items-md-center d-lg-none">
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">wifi</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">personal_video</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">restaurant</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">ac_unit</i>
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">kitchen</i>
+                <i class="material-icons font-size-normal text-gray-dark">room_service</i>
+              </div>
+              <div class="d-flex align-items-center mb-2 d-lg-none">
+                <i class="material-icons font-size-normal text-gray-dark mr-md-2">local_bar</i>
+                <i class="material-icons font-size-normal text-gray-dark">smoke_free</i>
+              </div>
+              <ul class="d-lg-flex flex-lg-wrap justify-content-lg-between d-md-none d-lg-block">
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">wifi</i>
+                  <span class="font-size-lg-s text-gray-dark">Wi-Fi</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">kitchen</i>
+                  <span class="font-size-lg-s text-gray-dark">Refrigerator</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">restaurant</i>
+                  <span class="font-size-lg-s text-gray-dark">Breakfast</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">room_service</i>
+                  <span class="font-size-lg-s text-gray-dark">Room Service</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">personal_video</i>
+                  <span class="font-size-lg-s text-gray-dark">Television</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">local_bar</i>
+                  <span class="font-size-lg-s text-gray-dark">Mini Bar</span>
+                </li>
+                <li class="w-50">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">ac_unit</i>
+                  <span class="font-size-lg-s text-gray-dark">Air Conditioner</span>
+                </li>
+                <li class="w-50 mb-lg-2">
+                  <i class="material-icons font-size-normal text-gray-dark mr-lg-2">smoke_free</i>
+                  <span class="font-size-lg-s text-gray-dark">Smoke Free</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <div class="d-flex justify-content-lg-center">
+            <i class="material-icons">person</i>
+            <i class="material-icons">person</i>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <div class="d-md-flex flex-md-column text-center">
+            <p class="font-weight-bold">TWD 1,980</p>
+            <span class="font-size-md-sm text-gray-dark">per night</span>
+          </div>
+        </td>
+        <td class="py-md-3">
+          <button type="button" class="addCart d-md-flex justify-content-md-center align-items-md-center bg-transparent border-0 w-100">
+            <i class="material-icons">remove</i>
+            <p class="text-gray-dark mx-md-3">0</p>
+            <i class="material-icons">add</i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+
+
+<section class="addCartDesc bg-secondary-light py-4 rounded-top">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+      <div class="d-md-flex flex-md-column mb-4 mb-md-0 text-right text-md-left">
+        <span class="font-size-sm text-white-light">1 room・2 night</span>
+        <p class="font-family-Raleway font-size-m font-weight-bold text-white mt-1">TWD 3,960</p>
+      </div>
+      <div class="d-flex">
+        <a class="btn btn-secondary font-weight-bold text-uppercase border-white mr-2 py-3 w-50 px-md-5" href="#" role="button">Cancel</a>
+        <a class="btn btn-primary font-weight-bold text-uppercase py-3 w-50 px-md-5" href="reservation.html" role="button">Reserve</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 訂閱 -->
+<div class="jumbotron jumbotron-fluid bg-primary-light mb-0">
+  <div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <h1 class="font-family-OpenSans font-size-m font-size-lg-lg font-weight-bolder mb-4">
+        Subscribe for Exclusive Offer
+      </h1>
+      <div class="input-group w-md-80 w-lg-50">
+        <input type="text" class="form-control border-0 py-4" placeholder="Your email address" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary text-uppercase font-weight-bold" type="button" id="button-addon2">subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

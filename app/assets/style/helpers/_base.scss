@@ -1,0 +1,22 @@
+h1,h2,h3,h4,h5,h6,p,span{
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0;
+  font-size: $font-size-base;
+}
+
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 0;
+}
+
+.objectCover{
+  object-fit: cover;
+}
+

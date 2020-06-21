@@ -1,0 +1,414 @@
+---
+title: Booking Hotel
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<!-- Swiper -->
+<div class="swiper-container">
+  <div class="parallax-bg position-absolute bg-cover bg-center" data-swiper-parallax="-20%"></div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide bg-gray">
+      <div class="font-family-Raleway font-size-ml font-size-md-lg font-weight-bold text-center text-white" data-swiper-parallax="-300">
+        Discover your ideal hotel
+      </div>
+    </div>
+    <div class="swiper-slide bg-gray">
+      <div class="font-family-Raleway font-size-ml font-size-md-lg font-weight-bold text-center text-white" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">
+        Discover your ideal hotel
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Navigation -->
+  <div class="swiper-button-prev swiper-button-white ml-4 ml-lg-8"></div>
+  <div class="swiper-button-next swiper-button-white mr-4 mr-lg-8"></div>    
+</div> 
+
+<!-- 搜尋訂房資訊 -->
+<div class="container searchArea position-absolute d-flex flex-column justify-content-center align-items-center mt-n6">
+  <div class="bg-primary-light d-flex flex-column flex-lg-row p-4 rounded w-100 w-md-80">
+    <ul class="d-lg-flex justify-content-lg-between w-lg-85 mr-lg-3">
+      <li class="dropdown mb-3 mb-lg-0 w-lg-30">
+        <button class="btn bg-white d-flex align-items-center py-2 py-md-3 w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons mr-2">place</i>
+          Destination
+        </button>
+        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Bangkok</p>
+              <span class="font-size-sm text-gray-dark">Thailiand</span>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Osaka</p>
+              <span class="font-size-sm text-gray-dark">Japan</span>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Roma</p>
+              <span class="font-size-sm text-gray-dark">Italy</span>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Paris</p>
+              <span class="font-size-sm text-gray-dark">London</span>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex px-3 mb-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Reykjavik</p>
+              <span class="font-size-sm text-gray-dark">Iceland</span>
+            </div>
+          </button>
+        </div>
+      </li>
+      <li class="dropdown mb-3 mb-lg-0 w-lg-30">
+        <button class="btn bg-white d-flex align-items-center py-2 py-md-3 w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons mr-2">event_note</i>
+          Check-in / Check-out
+        </button>
+       <!--  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item d-flex px-3" type="button">
+            <i class="material-icons mr-3">star</i>
+            <div class="d-flex flex-column">
+              <p>Bangkok</p>
+              <span class="font-size-sm text-gray-dark">Thailiand</span>
+            </div>
+          </button>
+        </div> -->
+      </li>
+      <li class="dropdown mb-3 mb-lg-0 w-lg-30">
+        <button class="btn bg-white d-flex align-items-center py-2 py-md-3 w-100" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons mr-2">person</i>
+          Guests
+        </button>
+        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item d-flex justify-content-between px-3 mb-3" type="button">
+            <p>Adult</p>
+            <div class="d-flex ">
+              <i class="material-icons">remove</i>
+              <p class="text-gray-dark mx-3">2</p>
+              <i class="material-icons">add</i>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex justify-content-between px-3 mb-3" type="button">
+            <p>Child</p>
+            <div class="d-flex ">
+              <i class="material-icons">remove</i>
+              <p class="text-gray-dark mx-3">0</p>
+              <i class="material-icons">add</i>
+            </div>
+          </button>
+          <button class="dropdown-item d-flex justify-content-between px-3 " type="button">
+            <p>Room</p>
+            <div class="d-flex ">
+              <i class="material-icons">remove</i>
+              <p class="text-gray-dark mx-3">1</p>
+              <i class="material-icons">add</i>
+            </div>
+          </button>
+
+        </div>
+      </li>
+    </ul>
+    <a class="btn btn-primary font-family-OpenSans font-weight-bold py-3 px-5" href="bangkokBooking.html" role="button">Search</a>  
+  </div>
+</div>
+
+<!-- Top Choice -->
+<section class="container topChoice mb-5">
+  <h2 class="font-family-Raleway font-size-m font-size-md-ml font-weight-bold text-secondary-light mb-4">Top Choices</h2>
+ <!-- 切換頁簽 -->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link font-weight-bold border-bottom active" id="home-tab" data-toggle="tab" href="#bali" role="tab" aria-controls="home" aria-selected="true">Bali<sup>128</sup></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link font-weight-bold border-bottom" id="profile-tab" data-toggle="tab" href="#BalOkinawa" role="tab" aria-controls="profile" aria-selected="false">BalOkinawa<sup>67</sup></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link font-weight-bold border-bottom" id="contact-tab" data-toggle="tab" href="#Taipei" role="tab" aria-controls="contact" aria-selected="false">Taipei<sup>53</sup></a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="bali" role="tabpanel" aria-labelledby="home-tab">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide py-4 pr-5 pl-0">
+            <a class="card">
+              <div class="card-img rounded d-flex justify-content-center align-items-center mb-2">
+                <img src="assets/images/top1.jpg" alt=""class="rounded"/>
+              </div>
+              <div class="card-body p-0">
+                <h3 class="font-weight-bold mb-2">Hotel Aqua</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <ul class="d-flex mr-2">
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                  </ul>
+                  <p class="font-size-s text-gray-dark">5.0
+                    <span class="font-size-sm text-gray">・2k reviews</span>
+                  </p>
+                </div>
+                <p class="font-size-s text-gray-dark">TWD 2,480
+                    <strike class="font-size-sm text-gray ml-2">TWD 3,980</strike>
+                  </p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide py-4 pr-5 pl-0">
+            <a class="card">
+              <div class="card-img rounded d-flex justify-content-center align-items-center mb-2">
+                <img src="assets/images/top2.jpg" alt=""class="rounded"/>
+              </div>
+              <div class="card-body p-0">
+                <h3 class="font-weight-bold mb-2">Mr. Kawasaki Inn</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <ul class="d-flex mr-2">
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                  </ul>
+                  <p class="font-size-s text-gray-dark">4.0
+                    <span class="font-size-sm text-gray">・500 reviews</span>
+                  </p>
+                </div>
+                <p class="font-size-s text-gray-dark">TWD 3,380</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide py-4 pr-5 pl-0">
+            <a class="card">
+              <div class="card-img rounded d-flex justify-content-center align-items-center mb-2">
+                <img src="assets/images/top3.jpg" alt=""class="rounded"/>
+              </div>
+              <div class="card-body p-0">
+                <h3 class="font-weight-bold mb-2">Weekly Paradise</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <ul class="d-flex mr-2">
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                  </ul>
+                  <p class="font-size-s text-gray-dark">4.0
+                    <span class="font-size-sm text-gray">・470 reviews</span>
+                  </p>
+                </div>
+                <p class="font-size-s text-gray-dark">TWD 4,780</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide py-4 pr-5 pl-0">
+            <a class="card">
+              <div class="card-img rounded d-flex justify-content-center align-items-center mb-2">
+                <img src="assets/images/top4.jpg" alt=""class="rounded"/>
+              </div>
+              <div class="card-body p-0">
+                <h3 class="font-weight-bold mb-2">Beast Hotel</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <ul class="d-flex mr-2">
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                    <li><i class="material-icons">star</i></li>
+                  </ul>
+                  <p class="font-size-s text-gray-dark">4.0
+                    <span class="font-size-sm text-gray">・283 reviews</span>
+                  </p>
+                </div>
+                <p class="font-size-s text-gray-dark">TWD 1,980</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="swiper-button-prev font-weight-bold text-primary d-none d-md-block"></div>
+        <div class="swiper-button-next font-weight-bold text-primary d-none d-md-block"></div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="BalOkinawa" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="Taipei" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  </div>
+</section>
+ 
+<!-- Destinations -->
+<section class="container destinations mb-6">
+  <h2 class="font-family-Raleway font-size-m font-size-md-ml font-weight-bold text-secondary-light mb-4">Popular Destinations</h2>
+  <ul class="row flex-wrap">
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-4">
+      <div class="card">
+        <div class="card-img d-flex justify-content-center align-items-center">
+          <img src="assets/images/Osaka.jpg" class="rounded" alt="...">
+        </div>
+        <div class="card-img-overlay bg-gray rounded">
+          <div class="card-title d-flex flex-column">
+            <span class="font-size-sm font-weight-bold text-white-light text-uppercase">JAPAN</span>
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="font-size-m font-weight-bold text-white">Osaka</h3>
+              <i class="material-icons text-white">keyboard_arrow_down</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-4">
+      <div class="card">
+        <div class="card-img d-flex justify-content-center align-items-center">
+          <img src="assets/images/Kyoto.jpg" class="" alt="...">
+        </div>
+        <div class="card-img-overlay bg-gray rounded">
+          <div class="card-title d-flex flex-column">
+            <span class="font-size-sm font-weight-bold text-white-light text-uppercase">JAPAN</span>
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="font-size-m font-weight-bold text-white">Kyoto</h3>
+              <i class="material-icons text-white">keyboard_arrow_down</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-4">
+      <div class="card">
+        <div class="card-img d-flex justify-content-center align-items-center">
+          <img src="assets/images/Reykjavic.jpg" class="" alt="...">
+        </div>
+        <div class="card-img-overlay bg-gray rounded">
+          <div class="card-title d-flex flex-column">
+            <span class="font-size-sm font-weight-bold text-white-light text-uppercase">Iceland</span>
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="font-size-m font-weight-bold text-white">Reykjavík</h3>
+              <i class="material-icons text-white">keyboard_arrow_down</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-4">
+      <div class="card">
+        <div class="card-img d-flex justify-content-center align-items-center">
+          <img src="assets/images/Paris.jpg" class="" alt="...">
+        </div>
+        <div class="card-img-overlay bg-gray rounded">
+          <div class="card-title d-flex flex-column">
+            <span class="font-size-sm font-weight-bold text-white-light text-uppercase">France</span>
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="font-size-m font-weight-bold text-white">Paris</h3>
+              <i class="material-icons text-white">keyboard_arrow_down</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-4">
+      <div class="card">
+        <div class="card-img d-flex justify-content-center align-items-center">
+          <img src="assets/images/Roman.jpg" class="" alt="...">
+        </div>
+        <div class="card-img-overlay bg-gray rounded">
+          <div class="card-title d-flex flex-column">
+            <span class="font-size-sm font-weight-bold text-white-light text-uppercase">Italy</span>
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="font-size-m font-weight-bold text-white">Roma</h3>
+              <i class="material-icons text-white">keyboard_arrow_down</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-4">
+      <div class="card">
+        <div class="card-img d-flex justify-content-center align-items-center">
+          <img src="assets/images/Bangkok.jpg" class="" alt="...">
+        </div>
+        <div class="card-img-overlay bg-gray rounded">
+          <div class="card-title d-flex flex-column">
+            <span class="font-size-sm font-weight-bold text-white-light text-uppercase">Thailand</span>
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="font-size-m font-weight-bold text-white">Bangkok</h3>
+              <i class="material-icons text-white">keyboard_arrow_down</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- Inspiration -->
+<section class="container inspiration mb-4">
+  <div class="d-flex justify-content-between align-items-center">
+    <h2 class="font-family-Raleway font-size-m font-size-md-ml font-weight-bold text-secondary-light">Get Inspiration</h2>
+    <a class="btn btn-outline-primary font-size-s font-weight-bold text-uppercase" href="#" role="button">See More</a>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper w-100">
+      <div class="swiper-slide py-4 pr-5 pl-0">
+        <a class="card">
+          <div class="card-img rounded d-flex justify-content-center align-items-center mb-2">
+            <img src="assets/images/italy.jpg" alt=""class="rounded"/>
+          </div>
+          <div class="card-body p-0">
+            <h3 class="font-family-Raleway font-size-m font-weight-bold mb-2">The fifth most visited country</h3>
+            <p class="font-size-sm font-size-md-normal text-gray-dark">Italy is the fifth most visited country in the world, with a total of 52.3 million…</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide py-4 pr-5 pl-0">
+        <a class="card">
+          <div class="card-img rounded d-flex justify-content-center align-items-center mb-2">
+            <img src="assets/images/Thailand.jpg" alt=""class="rounded"/>
+          </div>
+          <div class="card-body p-0">
+            <h3 class="font-family-Raleway font-size-m font-weight-bold mb-2">Visit Thailand for Bangkok</h3>
+            <p class="font-size-sm font-size-md-normal text-gray-dark">Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide py-4 pr-5 pl-0">
+        <a class="card">
+          <div class="card-img rounded d-flex justify-content-center align-items-center mb-2">
+            <img src="assets/images/NewZealand.jpg" alt=""class="rounded"/>
+          </div>
+          <div class="card-body p-0">
+            <h3 class="font-family-Raleway font-size-m font-weight-bold mb-2">Lord of the Rings Tour</h3>
+            <p class="font-size-sm font-size-md-normal text-gray-dark">The national cuisine has been described as Pacific Rim, incorporating the native Māori…</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 訂閱 -->
+<div class="jumbotron jumbotron-fluid bg-primary-light mb-0">
+  <div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <h1 class="font-family-OpenSans font-size-m font-size-lg-lg font-weight-bolder mb-4">
+        Subscribe for Exclusive Offer
+      </h1>
+      <div class="input-group w-md-80 w-lg-50">
+        <input type="text" class="form-control border-0 py-4" placeholder="Your email address" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary text-uppercase font-weight-bold" type="button" id="button-addon2">subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

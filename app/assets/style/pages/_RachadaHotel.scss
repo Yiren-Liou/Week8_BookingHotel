@@ -1,0 +1,50 @@
+.swiper-slide-img {
+  height: 247px;
+  object-fit: cover; 
+}
+
+@media (min-width: 992px){
+  table th:first-child{
+    width: 50%;
+  }
+  table th:nth-child(2){
+    width: 15%;
+  }
+  table th:nth-child(3){
+    width: 15%;
+  }
+  table th:last-child{
+    width: 20%;
+  }
+}
+
+@media (min-width: 768px){
+  .rachada-img-first{
+    height: 268px;
+  }
+  .rachada-img-secondary, .rachada-img-third{
+    height: 132px;
+  }
+  .rachada-img-forth{
+    height: 93px;
+  }
+}
+@media (min-width: 992px){
+  .rachada-img-first{
+    height: 434px;
+  }
+  .rachada-img-secondary, .rachada-img-third{
+    height: 213px;
+  }
+  .rachada-img-forth{
+    height: 151px;
+  }
+}
+
+.addCartDesc{
+  display: none;
+}
+
+.addCartDesc.open{
+  display: block;  
+}

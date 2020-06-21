@@ -1,0 +1,134 @@
+// 圖片
+.bg-center{
+  background-position: center center;
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.z-1{
+  z-index: 1;
+}
+
+// 字體
+$font-family-OpenSans: "Open Sans", sans-serif;
+$font-family-Raleway: "Raleway", sans-serif;
+$font-family-Roboto: "Roboto", sans-serif;
+
+.font-family-OpenSans{
+  font-family: $font-family-OpenSans;
+}
+.font-family-Raleway{
+  font-family: $font-family-Raleway;
+}
+.font-family-Roboto{
+  font-family: $font-family-Roboto;
+}
+
+// 字體大小
+$font-size-xs: 0.625rem;
+$font-size-s: 0.875rem;
+$font-size-m: 1.5rem;
+$font-size-ml: 2rem;
+
+.font-size-xs{
+  font-size: $font-size-xs;
+}
+.font-size-sm{
+  font-size: $font-size-sm;
+}
+.font-size-s{
+  font-size: $font-size-s;
+}
+.font-size-normal{
+  font-size: $font-size-base;
+}
+.font-size-m{
+  font-size: $font-size-m;
+}
+.font-size-ml{
+  font-size: $font-size-ml;
+}
+.font-size-lg{
+  font-size: $font-size-lg;
+}
+@media (min-width: 768px) { 
+  .font-size-md-xs{
+    font-size: $font-size-xs;
+  }
+  .font-size-md-sm{
+    font-size: $font-size-sm;
+  }
+  .font-size-md-s{
+    font-size: $font-size-s;
+  }
+  .font-size-md-normal{
+    font-size: $font-size-base;
+  }
+  .font-size-md-m{
+    font-size: $font-size-m;
+  }
+  .font-size-md-ml{
+    font-size: $font-size-ml;
+  }
+  .font-size-md-lg{
+    font-size: $font-size-lg;
+  }
+}
+
+@media (min-width: 992px) { 
+  .font-size-lg-xs{
+    font-size: $font-size-xs;
+  }
+  .font-size-lg-sm{
+    font-size: $font-size-sm;
+  }
+  .font-size-lg-s{
+    font-size: $font-size-s;
+  }
+  .font-size-lg-normal{
+    font-size: $font-size-base;
+  }
+  .font-size-lg-m{
+    font-size: $font-size-m;
+  }
+  .font-size-lg-ml{
+    font-size: $font-size-ml;
+  }
+  .font-size-lg-lg{
+    font-size: $font-size-lg;
+  }
+}
+
+// 間距
+@media (min-width: 768px){
+  .w-md-30{
+    width: 30% !important;
+  }
+  .w-md-50{
+    width: 50% !important;
+  }
+  .w-md-80{
+    width: 80% !important;
+  }
+}
+
+@media (min-width: 992px){
+  .w-lg-30{
+    width: 30% !important;
+  }
+  .w-lg-50{
+    width: 50% !important;
+  }
+  .w-lg-70{
+    width: 70% !important;
+  }
+  .w-lg-85{
+    width: 85% !important;
+  }
+  .w-lg-auto{
+    width: auto !important;
+  }
+}
+
